@@ -1,0 +1,82 @@
+/*
+restful api server client python
+restful api server client python flask
+
+curl
+postman
+netcat/nc+echo
+browser+dev
+
+https://www.bbkane.com/blog/rest-server-and-client-in-python/
+https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
+https://medium.com/@keployio/in-the-world-of-web-development-rest-apis-are-the-backbone-of-data-communication-between-clients-6d3ca2a7e579
+https://dqops.com/docs/client/
+https://www.datacamp.com/tutorial/making-http-requests-in-python
+https://dev.to/hardy_mervana/how-to-create-rest-api-with-python-a-step-by-step-guide-g93
+https://github.com/ynsrc/python-simple-rest-api
+https://www.integrate.io/blog/an-introduction-to-rest-api-with-python/
+https://medium.com/@johnidouglasmarangon/a-minimal-restful-api-in-python-2c316bd2c0c3
+https://aps.autodesk.com/blog/create-python-rest-api-server
+https://medium.com/@muhammadirfan92/creating-and-deploying-a-simple-flask-api-server-and-client-side-7d4f5690551
+https://pythonbasics.org/flask-rest-api/
+https://www.digitalocean.com/community/tutorials/create-a-rest-api-using-flask-on-ubuntu
+https://www.geeksforgeeks.org/python/flask-creating-rest-apis/
+https://medium.com/@sarangobrian0/using-restful-routes-in-flask-python-to-build-apis-d46eea20c348
+https://cis192.github.io/flask
+https://www.imaginarycloud.com/blog/flask-python
+https://www.linode.com/docs/guides/create-restful-api-using-python-and-flask/
+https://www.analyticsvidhya.com/blog/2022/01/rest-api-with-python-and-flask/
+https://dzone.com/articles/build-simple-api-with-python-flask-and-sql
+https://blog.teclado.com/first-rest-api-flask-postgresql-python/
+
+https://www.digitalocean.com/community/tutorials/how-to-use-netcat-to-establish-and-test-tcp-and-udp-connections
+
+https://www.fullstackpython.com/wsgi-servers.html
+https://blog.stackademic.com/flask-and-wsgi-1b91a5ed11c2
+https://www.geeksforgeeks.org/python/changing-host-ip-address-in-flask/
+https://www.geeksforgeeks.org/python/how-to-change-port-in-flask-app/
+
+https://www.geeksforgeeks.org/python/help-function-in-python/
+https://www.digitalocean.com/community/tutorials/python-help-function
+https://stackoverflow.com/questions/9037828/writing-a-help-for-python-script
+https://towardsdatascience.com/python-help-function-explained-fba9c15f42b1/
+https://medium.com/@ryk.kiel/python-pro-tips-organizing-and-simplifying-your-codebase-with-utilities-and-helper-functions-6a344d6a1873
+
+https://stackoverflow.com/questions/15300550/python-return-return-none-and-no-return-at-all-is-there-any-difference
+https://www.w3schools.com/python/ref_keyword_pass.asp
+
+https://docs.python.org/3/library/logging.html
+https://realpython.com/python-logging/
+https://betterstack.com/community/guides/logging/how-to-start-logging-with-python/
+https://www.geeksforgeeks.org/python/logging-in-python/
+https://docs.python.org/uk/3.13/library/logging.html
+
+https://www.geeksforgeeks.org/python/how-to-connect-to-sqlite-database-that-resides-in-the-memory-using-python/
+https://www.tutorialspoint.com/how-to-connect-to-sqlite-database-that-resides-in-the-memory-using-python
+
+https://semaphore.io/community/tutorials/testing-python-applications-with-pytest
+https://docs.pytest.org/en/stable/example/simple.html
+https://docs.pytest.org/en/stable/
+https://medium.com/@adocquin/mastering-unit-tests-in-python-with-pytest-a-comprehensive-guide-896c8c894304
+
+https://semaphore.io/community/tutorials/testing-python-applications-with-pytest
+https://docs.pytest.org/en/stable/example/simple.html
+https://docs.pytest.org/en/stable/
+https://medium.com/@adocquin/mastering-unit-tests-in-python-with-pytest-a-comprehensive-guide-896c8c894304
+https://www.geeksforgeeks.org/python/getting-started-with-pytest/
+https://testdriven.io/blog/pytest-for-beginners/
+https://docs.pytest.org/en/stable/getting-started.html
+
+
+...cmds...
+sudo apt install python3-flask
+pip install Flask
+pip install pytest
+python -m pip install -r requirements.txt
+
+python server.py
+python client.py
+python -m pytest server.py
+python server.py -h
+
+*/
