@@ -18,11 +18,6 @@ tickets = [
 
 ###############################################################################
 
-parser = argparse.ArgumentParser(description='This is my help')
-args = parser.parse_args()
-
-###############################################################################
-
 # Get all tickets
 @app.route('/tickets', methods=['GET'])
 def get_tickets():
@@ -53,6 +48,7 @@ def add_ticket():
         Post op
     """
     print("In add_ticket()")
+    #request.get_json()
     new_ticket = request.json
     tickets.append(new_ticket)
     return jsonify(new_ticket), 201
@@ -89,6 +85,8 @@ def test_get_address() -> None:
 ###############################################################################
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Current server')
+    args = parser.parse_args()
     logging.basicConfig(filename='tmp.log', level=logging.INFO)
     logger.info('Started')
     #app.run(host='127.0.0.1', port=5000, debug=True)
