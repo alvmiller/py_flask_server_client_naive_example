@@ -68,7 +68,6 @@ https://testdriven.io/blog/pytest-for-beginners/
 https://docs.pytest.org/en/stable/getting-started.html
 
 
-...cmds...
 sudo apt install python3-flask
 pip install Flask
 pip install pytest
@@ -78,5 +77,11 @@ python server.py
 python client.py
 python -m pytest server.py
 python server.py -h
+
+sudo docker build -t python-docker-server .
+sudo docker run --network=host python-docker-server
+
+sudo docker build -t python-docker-client .
+sudo docker run --network="host" python-docker-client
 
 */
