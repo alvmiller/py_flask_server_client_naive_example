@@ -78,6 +78,9 @@ python client.py
 python -m pytest server.py
 python server.py -h
 
+server.py
+client.py
+
 sudo docker build -t python-docker-server .
 sudo docker run --network=host python-docker-server
 
