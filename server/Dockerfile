@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 
 # Bundle app source
 COPY . /app
+RUN chmod +x server.py
 RUN chmod +x entrypoint.sh
 
 EXPOSE 5000
