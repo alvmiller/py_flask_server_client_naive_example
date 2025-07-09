@@ -108,9 +108,12 @@ def delete_ticket(ticket_id):
 
 ###############################################################################
 
-def test_get_full_address() -> None:
+def test_get_address() -> None:
     """Test web server address"""
     assert get_address() == '127.0.0.1'
+
+def test_get_port() -> None:
+    """Test web server port"""
     assert get_port() == 5000
 
 ###############################################################################
