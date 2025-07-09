@@ -1,8 +1,12 @@
+#!/usr/bin/env python
+
 from flask import Flask, jsonify, request
 import pprint
 import logging
 import pytest
 import argparse
+import sqlite3
+from sqlite3 import Error as Err
 
 ###############################################################################
 
@@ -15,6 +19,36 @@ tickets = [
     { "id": 2, "title": "BBB" },
     { "id": 3, "title": "CCC" }
 ]
+
+###############################################################################
+
+def get_port() -> int:
+    return 5000
+
+def get_address() -> str:
+    return '127.0.0.1'
+
+###############################################################################
+
+def sqlite_try():
+    try:
+        print()
+        print("SQLite:")
+        connection = sqlite3.connect(':memory:')
+        cursor = connection.cursor()
+        cursor.execute('''CREATE TABLE ticket (
+                          id INTEGER PRIMARY KEY,
+                          name TEXT )''')
+        cursor.execute("INSERT INTO ticket VALUES (20, 'WWWWW')")
+        cursor.execute("SELECT * FROM ticket")
+        rows = cursor.fetchall()
+        for row in rows:
+            print(row)
+        print()
+    # if any interruption or error occurs
+    except Err: print(Err)
+    # terminate the connection    
+    finally: connection.close()
 
 ###############################################################################
 
@@ -74,20 +108,21 @@ def delete_ticket(ticket_id):
 
 ###############################################################################
 
-#@pytest.fixture
-def get_address() -> str:
-    return "http://127.0.0.1:5000/"
-
-def test_get_address() -> None:
+def test_get_full_address() -> None:
     """Test web server address"""
-    assert get_address() == "http://127.0.0.1:5000/"
+    assert get_address() == '127.0.0.1'
+    assert get_port() == 5000
 
 ###############################################################################
 
 if __name__ == '__main__':
+    sqlite_try()
+
     parser = argparse.ArgumentParser(description='Current server')
     args = parser.parse_args()
     logging.basicConfig(filename='tmp.log', level=logging.INFO)
     logger.info('Started')
+    print(get_tickets.__doc__)
     #app.run(host='127.0.0.1', port=5000, debug=True)
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(host=get_address(), port=get_port(), debug=True)
