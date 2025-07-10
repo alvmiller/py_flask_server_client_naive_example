@@ -86,6 +86,8 @@ python client.py
 python -m pytest server.py
 python server.py -h
 
+chmod +x server.py
+chmod +x client.py
 server.py
 client.py
 
