@@ -14,6 +14,34 @@ from requests.auth import HTTPBasicAuth
 
 server_address_full = 'http://127.0.0.1:5000/tickets'
 
+def get_all_req():
+    #private_url_response = requests.get( url="https://api.github.com/user", auth=HTTPBasicAuth("username", "token") )
+    print("For server->get_tickets() request")
+    try:
+        print()
+        response = requests.get(server_address_full, timeout=5)
+        response.raise_for_status()
+        #pdb.set_trace()
+        print()
+        pprint.pprint(response.json())
+        print(response.text)
+        print(response.json())
+        print(response.status_code)
+        print()
+    # If the request fails (404) then print the error.
+    except requests.exceptions.HTTPError as error:
+        print(error)
+    except requests.exceptions.TooManyRedirects as error:
+        print(error)
+    except requests.ConnectionError as error:
+        print(error)
+    except requests.Timeout as error:
+        print(error)
+    except Exception as err:
+        print(f"Unexpected {err=}, {type(err)=}")
+    print()
+    pass
+
 def get_req():
     #private_url_response = requests.get( url="https://api.github.com/user", auth=HTTPBasicAuth("username", "token") )
     print("For server->get_tickets() request")
@@ -105,9 +133,11 @@ def post_req():
     pass
 
 def main():
+    get_all_req()
     get_req()
     get_sess_req()
     post_req()
+    get_all_req()
 
 if __name__ == "__main__":
     main()
