@@ -6,6 +6,7 @@ curl
 postman
 netcat/nc+echo
 browser+dev
+nmap
 
 https://www.bbkane.com/blog/rest-server-and-client-in-python/
 https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
@@ -41,6 +42,13 @@ https://www.digitalocean.com/community/tutorials/python-help-function
 https://stackoverflow.com/questions/9037828/writing-a-help-for-python-script
 https://towardsdatascience.com/python-help-function-explained-fba9c15f42b1/
 https://medium.com/@ryk.kiel/python-pro-tips-organizing-and-simplifying-your-codebase-with-utilities-and-helper-functions-6a344d6a1873
+
+https://www.redhat.com/en/blog/quick-nmap-inventory
+https://www.recordedfuture.com/threat-intelligence-101/tools-and-techniques/nmap-commands
+https://security.stackexchange.com/questions/87023/how-to-run-nmap-http-scripts-on-unusual-ports
+https://nmap.org/book/man-nse.html
+https://nmap.org/book/nse-usage.html
+https://nmap.org/book/nse.html
 
 https://stackoverflow.com/questions/15300550/python-return-return-none-and-no-return-at-all-is-there-any-difference
 https://www.w3schools.com/python/ref_keyword_pass.asp
