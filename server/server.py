@@ -44,6 +44,7 @@ def sqlite_try():
         rows = cursor.fetchall()
         for row in rows:
             print(row)
+            tickets.append(row)
         print()
     # if any interruption or error occurs
     except Err: print(Err)
@@ -108,12 +109,9 @@ def delete_ticket(ticket_id):
 
 ###############################################################################
 
-def test_get_address() -> None:
+def test_get_full_address() -> None:
     """Test web server address"""
     assert get_address() == '127.0.0.1'
-
-def test_get_port() -> None:
-    """Test web server port"""
     assert get_port() == 5000
 
 ###############################################################################
